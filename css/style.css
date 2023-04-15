@@ -140,7 +140,10 @@ img{
 }
 
 .entrada{
+<<<<<<< HEAD
     
+=======
+>>>>>>> 2b1ef3eb8d01667b9262c18bda83537b5f201d37
     border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
 }
@@ -201,10 +204,13 @@ img{
 .widget-curso__label,
 .widget-curso__info{
     font-size: 1.8rem;
+<<<<<<< HEAD
 }
 
 .footer{
     background-color: var(--negro);
     padding-bottom: 3rem;
     margin-top: 4rem;
+=======
+>>>>>>> 2b1ef3eb8d01667b9262c18bda83537b5f201d37
 }
