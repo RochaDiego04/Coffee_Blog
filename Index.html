@@ -4,11 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Sin esta etiqueta los media queries no funcionan-->
     <title>Coffee Blog</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <meta name="description" content="Página web de blog de café">
+
+    <!--Prefetch es cargar la siguiente página que esperamos que el usuario visite. Para esto podemos usar google analytics-->
+    <link rel="prefetch" href="Nosotros.html" as="document">
+
+    <!--Preload-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css" as="style">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
+    rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -40,7 +51,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="blog image">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" "img/blog1.jpg" alt="blog image">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -54,7 +68,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="blog image">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" "img/blog2.jpg" alt="blog image">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -68,7 +85,10 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="blog image">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" "img/blog3.jpg" alt="blog image">
+                    </picture>
                 </div>
 
                 <div class="entrada__contenido">
@@ -93,7 +113,7 @@
                     <p class="widget-curso__label"> Capacity:
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="Article.html" class="boton boton--secundario">More Information</a>
+                    <a href="Article.html" class="boton boton--secundario">More Information about our courses</a>
                 </li>
                 <li class="widget-curso"></li>
 
@@ -105,7 +125,7 @@
                     <p class="widget-curso__label"> Capacity:
                         <span class="widget-curso__info">20</span>
                     </p>
-                    <a href="Article.html" class="boton boton--secundario">More Information</a>
+                    <a href="Article.html" class="boton boton--secundario">More Information about our courses</a>
                 </li>
                 <li class="widget-curso"></li>
             </ul>
@@ -127,6 +147,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/modernizr.js"></script>
 </body>
 
 </html>
