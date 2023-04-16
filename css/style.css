@@ -1,6 +1,6 @@
 :root{
     --fuenteHeading: 'PT Sans', sans-serif;
-    --fuenteParrafos: 'Open Sans' sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
     
     --primario: #784D3C;
     --blanco: #ffffff;
@@ -159,6 +159,11 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
+}
+
+.boton:hover{
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -245,3 +250,38 @@ img{
 }
 
 /** Estilo de curso tambien modificado en widget-curso__label, widget-curso__info, etc **/
+
+/** Contacto **/
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 3rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo__label {
+    flex: 0 0 7rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field {
+    flex: 1; /*Toma todo el espacio que no use .campo__label*/
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea{
+    height: 20rem;
+}
