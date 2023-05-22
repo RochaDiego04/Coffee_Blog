@@ -113,6 +113,10 @@ img{
     color: var(--blanco);
 }
 
+.logo__imagen {
+
+}
+
 .logo__nombre {
     font-weight: 400;
 }
